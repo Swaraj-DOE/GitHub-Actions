@@ -1,0 +1,21 @@
+# Workflow[No identation required fo naming the workflow]
+# Should have name
+name: Hello
+#on tells when the workflow should run (Give identation by tab)
+on: 
+  workflow_dispatch:
+# jobs
+# Should be inside the workflow and there can be one or more jobs thats why we write jobs
+
+jobs:
+  say-hello:
+  #creates an ephemerel container with Running Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+       - name: say Hello to everyone # name of steps
+         run: echo "Hello Dosto" # What to do in steps
+# Steps 
+# Should be inside the jobs
+
+#Actions
+#Should be inside the jobs
