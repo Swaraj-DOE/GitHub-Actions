@@ -1,4 +1,3 @@
-
 name: Auto Linter
 
 on:
@@ -11,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout/Clone the code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Install Linter
+      - name: Install Ruff
         run: pip install ruff
 
-      - name: Run Python Linter
+      - name: Run Linter
         run: ruff check .
