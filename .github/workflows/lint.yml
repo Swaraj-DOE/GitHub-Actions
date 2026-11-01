@@ -13,8 +13,8 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Install Ruff
+      - name: Install Linter
         run: pip install ruff
 
-      - name: Run Linter
+      - name: Checks the file for linting
         run: ruff check .
