@@ -1,4 +1,4 @@
-# this code is for learning purpose
+#This code is for learning purpose
 from flask import Flask, render_template
 app = Flask(__name__)
 
