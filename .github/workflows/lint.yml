@@ -1,8 +1,10 @@
+
 name: Auto Linter
 
 on:
   push:
-    paths: '*.py'
+    paths:
+      - '**.py'
 
 jobs:
   code:
@@ -12,8 +14,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
       - name: Install Linter
         run: pip install ruff
 
-      - name: Checks the file for linting
+      - name: Check Python Code
         run: ruff check .
